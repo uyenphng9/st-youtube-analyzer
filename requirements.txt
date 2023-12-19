@@ -5,4 +5,4 @@ pydeck
 streamlit
 matplotlib
 seaborn
-plotly.express
+plotly-express
