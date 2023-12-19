@@ -107,7 +107,7 @@ def data_analysis(data):
         ranking_metric = st.selectbox('Select a ranking metric', [
             'subscribers', 'video views'])
         st.write(f"Ranking based on: {ranking_metric}")
-        sorted_data = data.sort_values(by=ranking_metric, ascending=False)
+        sorted_data = data.sort_values(by=ranking_metric, ascending=True)
         st.write(
             sorted_data[['Youtuber', ranking_metric]].reset_index(drop=True))
     # Column 2: ranking plot
@@ -117,7 +117,7 @@ def data_analysis(data):
     # Scatter plot
     st.subheader('Scatter Plot: Subscribers vs. Video Views')
     fig, ax = plt.subplots()
-    ax.scatter(data['subscribers'], data['video views'], alpha=0.5)
+    ax.scatter(data['subscribers'], data['video views'])
     ax.set_xlabel('Subscribers')
     ax.set_ylabel('Video Views')
     st.pyplot(fig)
