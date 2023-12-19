@@ -31,8 +31,9 @@ def get_channel(data):
 
 @st.cache_data
 def load_data():
-    """Load and preprocess the YouTube data from the CSV file."""
+    """Read the YouTube data from the CSV file."""
     df_youtube = pd.read_csv('most_subscribed_youtube_channels.csv')
+    return df_youtube
 
     # Change the data type
     df_youtube["subscribers"] = [
