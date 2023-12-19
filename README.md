@@ -1,4 +1,2 @@
 # streamlitapp
-"""
-This streamlit application allows users to analyse and visualize Youtube channels.
-"""
+This streamlit application allows users to analyze and visualize Youtube channels.
